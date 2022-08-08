@@ -1,0 +1,169 @@
+.ev {
+    @include container;
+    @include flex-col;
+    @include flex-center;
+
+    &-container, &-header, &-body {
+        @include container;
+        @include flex-col;
+        @include flex-center;
+    }
+
+    &-header {
+        padding: 20px 0;
+        background: #fff;
+        box-shadow: 0px 0px 25px #000;
+
+        &__logo {
+            @include container;
+            @include flex-col;
+            @include flex-center;
+
+            & img {
+                width: 165px;
+            }
+        }
+    }
+
+    &-body{
+
+        &__title{
+            margin-top: 4rem;
+            width: 270px;
+            height: 160px;
+            @include flex-col;
+            @include flex-center;
+            background: url('./images/Recurso 9.png') no-repeat center center / contain;
+        }
+
+        &__desc,
+        &__img,
+        &__text-warning,
+        &__action-btn,
+        &__text-info,
+        &__video-container,
+        &__video-item{
+            @include container;
+            @include flex-col;
+            @include flex-center;
+        }
+
+        &__desc{
+            margin-top: 1.2rem;
+            padding: 0 4rem;
+            font-size: $fs-lg;
+            line-height: calc($fs-lg + .5rem);
+            font-weight: 900;
+            font-style: normal;
+            text-align: center;
+        }
+
+        &__img{
+            & img{
+                width: 280px;
+            }
+        }
+
+        &__text-warning{
+            margin-bottom: 3rem;
+            padding: 0 3rem;
+            text-align: center;
+            font-size: $fs-lg;
+            line-height: calc($fs-lg + .5rem);
+            color: rgb(231, 0, 0);
+        }
+
+        &__text-info{
+            margin-bottom: 3rem;
+            padding: 0 3rem;
+            font-size: $fs-xl;
+            line-height: calc($fs-xl + .5rem);
+            text-align: center;
+        }
+
+        &__video-item{
+            & img{
+                width: 300px;
+            }
+        }
+    }
+}
+
+@include breakpoint-md{
+    .ev{
+        &-body{
+            &__title{
+                width: calc($bp-md - 2rem);
+            }
+            &__img{
+                & img{
+                    width: calc($bp-md - 4rem);
+                }
+            }
+            &__video-item{
+                & img{
+                    width: calc($bp-md - 2rem);
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-lg{
+    .ev{
+        &-body{
+            &__title{
+                width: calc($bp-lg - 2rem);
+            }
+            &__img{
+                & img{
+                    width: calc($bp-lg - 4rem);
+                }
+            }
+            &__video-item{
+                & img{
+                    width: calc($bp-lg - 2rem);
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-tab{
+    .ev{
+        &-body{
+            &__title{
+                width: calc($bp-tab - 15rem);
+                background: url('./images/Recurso 2.png') no-repeat center center / contain;
+            }
+            &__desc{
+                font-size: $fs-2xl;
+                line-height: calc($fs-2xl + .5rem);
+            }
+            &__img{
+                & img{
+                    width: calc($bp-tab - 24.7rem);
+                }
+            }
+            &__text-warning{
+                font-size: $fs-xl;
+                line-height: calc($fs-xl + .5rem);
+            }
+            &__text-info{
+                padding: 0;
+                font-size: $fs-2xl;
+                line-height: calc($fs-2xl + .5rem);
+            }
+            &__video-container{
+                @include flex-row;
+                padding: 0 5rem;
+            }
+            &__video-item{
+                & img{
+                    width: calc($bp-tab / 2.5);
+                }
+            }
+
+        }
+    }
+}
