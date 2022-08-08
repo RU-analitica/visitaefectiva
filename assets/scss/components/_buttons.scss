@@ -1,0 +1,23 @@
+.btn-primary{
+    width: 290px;
+    margin-top: 2rem;
+    background-color: #d49748 !important;
+    border: none !important;
+    font-size: $fs-sm !important;
+    line-height: calc($fs-sm + .5rem) !important;
+}
+@include breakpoint-md{
+    .btn-primary{
+        width: calc($bp-md - 2rem) !important;
+        font-size: $fs-md !important;
+        line-height: calc($fs-md + .5rem) !important;
+    }
+}
+@include breakpoint-lg{
+    .btn-primary{
+        width: calc($bp-lg - 2rem) !important;
+        font-size: $fs-lg !important;
+        line-height: calc($fs-lg + .5rem) !important;
+    }
+}
+
