@@ -95,10 +95,22 @@
             &__title{
                 width: calc($bp-md - 2rem);
             }
+            &__desc{
+                font-size: $fs-xl;
+                line-height: calc($fs-xl + .5rem);
+            }
             &__img{
                 & img{
                     width: calc($bp-md - 4rem);
                 }
+            }
+            &__text-warning{
+                font-size: $fs-xl;
+                line-height: calc($fs-xl + .5rem);
+            }
+            &__text-info{
+                font-size: $fs-2xl;
+                line-height: calc($fs-2xl + .5rem);
             }
             &__video-item{
                 & img{
@@ -146,13 +158,13 @@
                 }
             }
             &__text-warning{
-                font-size: $fs-xl;
-                line-height: calc($fs-xl + .5rem);
+                font-size: $fs-2xl;
+                line-height: calc($fs-2xl + .5rem);
             }
             &__text-info{
                 padding: 0;
-                font-size: $fs-2xl;
-                line-height: calc($fs-2xl + .5rem);
+                font-size: $fs-3xl;
+                line-height: calc($fs-3xl + .5rem);
             }
             &__video-container{
                 @include flex-row;
