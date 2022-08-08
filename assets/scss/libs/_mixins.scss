@@ -1,0 +1,70 @@
+// Box model props
+@mixin container{
+    width: 100%;
+    min-width: $mw;
+    height: 100%;
+}
+@mixin flex-col{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+@mixin flex-center{
+    justify-content: center;
+    align-items: center;
+}
+@mixin grid-center{
+    display: grid;
+    place-items: center;
+}
+@mixin bg-props{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// Breakpoints
+@mixin breakpoint-md{
+    @media (min-width: $bp-md){
+        @content;
+    }
+}
+@mixin breakpoint-lg{
+    @media (min-width: $bp-lg){
+        @content;
+    }
+}
+@mixin breakpoint-tab{
+    @media (min-width: $bp-tab){
+        @content;
+    }
+}
+@mixin breakpoint-tab-lg{
+    @media (min-width: $bp-tab-lg){
+        @content;
+    }
+}
+@mixin breakpoint-lap{
+    @media (min-width: $bp-lap){
+        @content;
+    }
+}
+@mixin breakpoint-desk{
+    @media (min-width: $bp-desk){
+        @content;
+    }
+}
+@mixin breakpoint-desk-lg{
+    @media (min-width: $bp-desk-lg){
+        @content;
+    }
+}
+@mixin breakpoint-desk-xl{
+    @media (min-width: $bp-desk-xl){
+        @content;
+    }
+}
+

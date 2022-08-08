@@ -1,0 +1,13 @@
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('./images/Recurso 1.png');
+    @include bg-props;
+}
